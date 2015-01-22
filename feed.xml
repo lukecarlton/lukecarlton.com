@@ -1,0 +1,33 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+
+    <channel>
+
+        <title>{{ site.author }}</title>
+        <link href="{{ site.url }}"/>
+        <author>
+            <name>{{ site.author }}</name>
+            <email>{{ site.author_email }}</email>
+        </author>
+        <language>en</language>
+
+        <image>
+            <url>{{ site.url }}/images/{{ site.logo }}</url>
+            <title>{{ site.author }}</title>
+            <link>{{ site.url }}</link>
+        </image>
+
+        {% for post in site.posts %}<item>
+            <title>{{ post.title }}</title>
+            <link>{{ site.url }}{{ post.url }}</link>
+            <id>{{ site.url }}{{ post.id }}</id>{% if post.description %}
+            <description>{{ post.description }}</description>{% endif %}{% if post.category %}
+            <category>{{ post.category }}</category>{% endif %}
+        </item>{% endfor %}
+
+    </channel>
+
+</rss>

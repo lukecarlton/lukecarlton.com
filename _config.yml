@@ -1,0 +1,49 @@
+# Site-specific Metadata
+title: Luke Carlton
+description: "Luke Carlton Description"
+
+# General Metadata used througout the site
+url: http://lukecarlton.com
+author: Luke Carlton
+author_email: luke@lukecarlton.com
+author_twitter: luke_carlton
+
+# Changes the URLs in the Contact Menu
+twitter_url:  "https://twitter.com/luke_carlton"
+vimeo_url:    "https://vimeo.com/lukecarlton"
+linkedin_url: "https://www.linkedin.com/in/lukecarltonanimator"
+tumblr_url:   "http://www.toanimatelikethis.tumblr.com"
+
+# Expects six-character hash codes
+menu_background_colour:        ""
+menu_text_colour:              ""
+menu_text_active_colour:       ""
+home_background_colour:        ""
+home_intro_text_colour:        ""
+home_intro_text_shadow_colour: ""
+# Lives under the /images folder, expects the file name
+logo: "logo.png"
+home_background_image: "bg-home.png"
+
+
+# Don't touch below me!
+
+
+timezone: Europe/London
+destination: ./_site
+layouts: ./_layouts
+exclude: ['node_modules', 'package.json', 'gulpfile.js']
+
+permalink: /:categories/:title
+paginate: 20
+paginate_path: 'page:num'
+
+markdown: rdiscount
+rdiscount:
+  extensions: [smart]
+markdown_ext: markdown,mkd,mkdn,md
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jemoji

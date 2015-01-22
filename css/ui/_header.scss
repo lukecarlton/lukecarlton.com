@@ -1,0 +1,271 @@
+/*------------------------------------*\
+    $ HEADER
+\*------------------------------------*/
+
+/**
+ * Hide the Master SVG
+ */
+.svg-master {
+    display: none;
+}
+
+/**
+ * Fancy Shmancy inputs to toggle the secondary navigation. Let's hide them.
+ */
+.secondary-navigation-toggler {
+    opacity: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 100%;
+}
+
+header {
+    background-color: $white;
+    color: lighten($black, 40%);
+    width: 100%;
+    height: 6em;
+    padding: 2em $wrapper-padding;
+    border-bottom: 1px solid #f0f0f0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 200;
+    transition: padding .1s ease, height .1s ease, transform .1s ease;
+    @include breakpoint("small") {
+        height: 7em;
+        padding: 1em $wrapper-padding;
+    }
+}
+    .logo {
+        background-image: url("/images/logo.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        width:  2.5em;
+        height: 2.5em;
+        display: inline-block;
+        float: right;
+        margin-top: -0.25em;
+        overflow: hidden;
+        white-space: nowrap;
+        text-indent: 100%;
+        transition: margin .1s ease;
+        @include breakpoint("small") {
+            margin-top: 1.25em;
+        }
+    }
+    .primary-navigation {
+        float: left;
+        margin-left: -0.5em;
+        @include breakpoint("medium") {
+            margin-left: -1em;
+        }
+    }
+        .primary-navigation-list li {
+            display: inline-block;
+            position: relative;
+        }
+        .primary-navigation-list label {
+            background-color: $white;
+            @extend %non-selectable;
+            display: block;
+            padding: 0 1em;
+            line-height: 2em;
+            cursor: pointer;
+            transition: color .15s ease;
+            @include breakpoint("small") {
+                padding: 0 0.8em;
+                font-size: 1.25em;
+                line-height: 4em;
+            }
+            &:hover,
+            &:focus,
+            &:active {
+                color: $black;
+            }
+            &:before {
+                content: "\2630\00A0\00A0";
+            }
+            &[for*="cancel"] {
+                display: none;
+            }
+        }
+            .secondary-navigation-toggler-menu:checked ~ header .primary-navigation-menu,
+            .secondary-navigation-toggler-contact:checked ~ header .primary-navigation-contact {
+                label[for*="menu"],
+                label[for*="contact"] {
+                    display: none;
+                }
+                label[for*="cancel"] {
+                    color: $black;
+                    display: block;
+                }
+            }
+
+.secondary-navigation {
+    background-color: $blue;
+    color: white;
+    width: 15.625em; // 250px
+    height: 100%;
+    padding: 2em 1.5em 1.5em;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    visibility: hidden;
+    z-index: 300;
+    transition: transform .1s ease, visibility 0 linear .1s;
+    label {
+        display: block;
+        margin-bottom: 1.333em;
+        font-size: 1.5em;
+        line-height: 1.333em;
+        cursor: pointer;
+        @include breakpoint("small") {
+            font-size: 1.5em;
+        }
+    }
+}
+    .secondary-navigation-list {
+        padding: 0 $wrapper-padding;
+        position: absolute;
+        left:  0;
+        right: 0;
+        top: 6em;
+        bottom: 4.875em;
+        overflow-x: hidden;
+        overflow-y: auto;
+        li {
+            display: block;
+            + li {
+                margin-top: 1em;
+            }
+        }
+        a {
+            color: $white;
+            display: block;
+            padding: 0.5em 0;
+            position: relative;
+            font-size: 1.375em;
+            line-height: 1em;
+            transition: padding .2s ease;
+            &:hover,
+            &:focus,
+            &:active {
+                padding-left: .5em;
+                svg {
+                    margin-left: .5em;
+                }
+            }
+            .secondary-navigation-contact & {
+                padding-left: 2em;
+                &:hover,
+                &:focus,
+                &:active {
+                    padding-left: 2.5em;
+                }
+            }
+            svg {
+                width: 1em;
+                height: 1em;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate3d(0, -50%, 0);
+                transition: margin .2s ease;
+            }
+        }
+        // Section highlights in 'Menu' Secondary Navigation
+        .home-page & .secondary-navigation-home,
+        .animation-page & .secondary-navigation-animation,
+        .illustration-page & .secondary-navigation-illustration,
+        .design-page & .secondary-navigation-design {
+            color: $dark-blue;
+            font-weight: 600;
+            &:hover,
+            &:focus,
+            &:active {
+                padding-left: 0;
+            }
+        }
+        &::-webkit-scrollbar {
+            background-color: $blue;
+            width: 1em;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $blue;
+            box-shadow: none;
+            border-radius: 0;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $dark-blue;
+            box-shadow: none;
+            border-radius: 1px;
+        }
+    }
+    .copyright {
+        position: absolute;
+        bottom: 1.5em;
+        left:  0;
+        right: 0;
+        font-size: .8125em;
+        line-height: 1.5em;
+        text-align: center;
+        span {
+            display: block;
+            white-space: nowrap;
+        }
+    }
+
+/**
+ * Allow the user to tap outside the navigations to close the secondary navigation.
+ */
+body > .secondary-navigation-cancel {
+    background-color: rgba(black, .8);
+    visibility: hidden;
+    z-index: 100;
+    label {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+    }
+}
+
+/**
+ * Control the Secondary Navigation
+ */
+.secondary-navigation-toggler-menu:checked ~ .secondary-navigation-cancel,
+.secondary-navigation-toggler-menu:checked ~ .secondary-navigation-menu,
+.secondary-navigation-toggler-contact:checked ~ .secondary-navigation-cancel,
+.secondary-navigation-toggler-contact:checked ~ .secondary-navigation-contact {
+    visibility: visible;
+}
+.secondary-navigation-toggler-menu:checked ~ .secondary-navigation-menu,
+.secondary-navigation-toggler-contact:checked ~ .secondary-navigation-contact {
+    transform: translateX(100%);
+    transition: transform .1s ease;
+}
+/**
+ * Control the content panels when navigation is open
+ */
+.secondary-navigation-toggler-menu:checked ~ header,
+.secondary-navigation-toggler-contact:checked ~ header {
+    padding-left: 17.125em;
+    @include breakpoint("medium") {
+        padding-left: $wrapper-padding;
+        transform: translateX(15.625em);
+    }
+}
+.secondary-navigation-toggler-menu:checked ~ .content,
+.secondary-navigation-toggler-contact:checked ~ .content {
+    margin-left: 15.625em;
+    @include breakpoint("medium") {
+        margin-left: 0;
+        transform: translateX(15.625em);
+    }
+}

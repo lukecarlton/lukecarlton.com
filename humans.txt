@@ -1,0 +1,19 @@
+# humanstxt.org
+
+/* OWNER */
+
+    Name:     Luke Carlton
+    Twitter:  @luke_carlton
+
+/* SITE */
+
+    URL:            http://lukecarlton.com
+    Language:       English
+    Doctype:        HTML5
+    Running on:     Jekyll on Github Pages
+
+
+/* DEVELOPER */
+
+    Name:     Chris Burnell
+    Twitter:  @iamchrisburnell

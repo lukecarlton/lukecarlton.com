@@ -1,0 +1,54 @@
+// Colour Palette
+$yellow: #FACE4B;
+$blue:   #22B0E3;
+$dark-blue: #0883B1;
+
+$white:  #FFFFFF;
+$black:  #000000;
+$grey:   #262626;
+
+// Font Stack
+$base-font-size:       16px;
+$primary-font-stack:   "Lato", serif;
+$secondary-font-stack: "Lato", sans-serif;
+$heading-font-stack:   "Lato", sans-serif;
+
+// Wrapper Widths
+$max-wrapper-width:    1202px;
+$medium-wrapper-width:  780px;
+$small-wrapper-width:   500px;
+$wrapper-padding:      1.25em;
+
+// SCSS Mixins
+@mixin breakpoint($breakpoint) {
+    @if $breakpoint == "uber" {
+        @media screen and (min-width: $max-wrapper-width) { @content ; }
+    }
+    @else if $breakpoint == "large" {
+        @media screen and (min-width: $medium-wrapper-width) { @content ; }
+    }
+    @else if $breakpoint == "medium" {
+        @media screen and (max-width: $medium-wrapper-width) { @content ; }
+    }
+    @else if $breakpoint == "small" {
+        @media screen and (max-width: $small-wrapper-width) { @content ; }
+    }
+    @else if $breakpoint == "video" {
+        @media screen and (max-width: 992px) { @content ; }
+    }
+}
+@mixin gradient($top, $bottom) {
+    background-image: linear-gradient(to bottom, $top 0%, $bottom 100%);
+}
+@mixin transition($transition: "all .2s ease-in-out") {
+    transition: #{$transition};
+}
+@mixin translate3d($values: "0, 0, 0") {
+    transform: translate3d(#{$values});
+}
+@mixin animation($animation) {
+    animation: #{$animation};
+}
+@mixin animation-play-state($value: "paused") {
+    animation-play-state: #{$value};
+}

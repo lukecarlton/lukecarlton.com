@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, minimal-ui">
+
+    <title>{% if page.title %}{{ page.title }} &ndash; {% endif %}{{ site.title }}</title>
+
+    <link rel="stylesheet" href="/css/styles.min.css">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+    <link rel="shortcut icon" href="/images/{{ site.logo }}">
+    <link rel="apple-touch-icon-precomposed" href="/images/{{ site.logo }}">
+    <link rel="author" type="text/plain" href="/humans.txt">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="apple-mobile-web-app-title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}">
+
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    {% include js-head.html %}
+
+    {% if page.page_class != "not-found-page" %}
+    <!-- OpenGraph and Twitter Microdata -->
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{% if page.page_class != "home-page" %}{{ page.url }}{% endif %}">
+    <meta property="og:image" content="/images/{{ site.logo }}">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@{{ site.author_twitter }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image:src" content="/images/{{ site.logo }}">
+    <meta name="twitter:domain" content="lukecarlton.com">
+    {% else %}
+    <meta name="robots" content="noindex,nofollow">
+    {% endif %}
+
+    <style>
+        .logo {
+            background-image: url("/images/{{ site.logo }}");
+        }
+    {% if page.layout == "home" %}
+        @media screen and (min-height: 500px) {
+            .home-page article {
+                margin-top: 3.5em;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate3d(-50%, -50%, 0);
+                        transform: translate3d(-50%, -50%, 0);
+            }
+        }
+        {% if (site.home_background_colour and site.home_background_colour != "") or (site.home_background_image and site.home_background_image != "") %}
+            .home-page .content {
+            {% if site.home_background_colour and site.home_background_colour != "" %}
+                background-color: {{ site.home_background_colour | replace: '#', '' | prepend: '#' }};
+            {% endif %}
+            {% if site.home_background_image and site.home_background_image != "" %}
+                background-image: url("{% if site.home_background_image contains: "//" %}{{ site.home_background_image }}{% else %}/images/{{ site.home_background_image }}{% endif %}");
+            {% endif %}
+            }
+        {% endif %}
+        {% if (site.home_intro_text_colour and site.home_intro_text_colour != "") or (site.home_intro_text_shadow_colour and site.home_intro_text_shadow_colour != "") %}
+            .site-introduction ~ p {
+            {% if site.home_intro_text_colour and site.home_intro_text_colour != "" %}
+                color: {{ site.home_intro_text_colour | replace: '#', '' | prepend: '#' }};
+            {% endif %}
+            {% if site.home_intro_text_shadow_colour and site.home_intro_text_shadow_colour != "" %}
+                text-shadow: 0 1px 1px {{ site.home_intro_text_shadow_colour | replace: '#', '' | prepend: '#' | replace: '#transparent', 'transparent' }};
+            {% endif %}
+            }
+        {% endif %}
+    {% endif %}
+    {% if site.menu_background_colour and site.menu_background_colour != "" %}
+        .secondary-navigation,
+        .item-navigation a {
+            background-color: {{ site.menu_background_colour | replace: '#', '' | prepend: '#' }};
+        }
+    {% endif %}
+    {% if site.menu_text_colour and site.menu_text_colour != "" %}
+        .secondary-navigation-list a {
+            color: {{ site.menu_text_colour | replace: '#', '' | prepend: '#' }};
+        }
+        &::-webkit-scrollbar {
+            background-color: {{ site.menu_text_colour | replace: '#', '' | prepend: '#' }};
+        }
+        &::-webkit-scrollbar-track {
+            background-color: {{ site.menu_text_colour | replace: '#', '' | prepend: '#' }};
+        }
+    {% endif %}
+    {% if site.menu_text_active_colour and site.menu_text_active_colour != "" %}
+        .home-page .secondary-navigation-list .secondary-navigation-home,
+        .animation-page .secondary-navigation-list .secondary-navigation-animation,
+        .illustration-page .secondary-navigation-list .secondary-navigation-illustration,
+        .design-page .secondary-navigation-list .secondary-navigation-design {
+            color: {{ site.menu_text_active_colour | replace: '#', '' | prepend: '#' }};
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: {{ site.menu_text_active_colour | replace: '#', '' | prepend: '#' }};
+        }
+    {% endif %}
+    </style>
+
+</head>
+<body{% if page.page_class %} class="{{ page.page_class }}"{% elsif page.category %} class="{{ page.category }}-page"{% endif %}>
+
+    {% include inline-svg.html %}
+
+    <input type="radio" name="secondary-navigation-toggler" class="secondary-navigation-toggler  secondary-navigation-toggler-cancel" id="secondary-navigation-toggler-cancel" aria-hidden="true" checked></input>
+    <input type="radio" name="secondary-navigation-toggler" class="secondary-navigation-toggler  secondary-navigation-toggler-menu" id="secondary-navigation-toggler-menu" aria-hidden="true"></input>
+    <input type="radio" name="secondary-navigation-toggler" class="secondary-navigation-toggler  secondary-navigation-toggler-contact" id="secondary-navigation-toggler-contact" aria-hidden="true"></input>
+
+    <header role="banner">
+        <a rel="home" class="logo" href="/" title="{{ site.title }}" tabindex="-1">
+            <span>{{ site.title }}</span>
+        </a>
+        <nav class="primary-navigation" role="navigation">
+            <ol class="primary-navigation-list">
+                <li class="primary-navigation-menu">
+                    <label for="secondary-navigation-toggler-menu">Menu</label>
+                    <label for="secondary-navigation-toggler-cancel" aria-hidden="true">Menu</label>
+                </li><!--
+             --><li class="primary-navigation-contact">
+                    <label for="secondary-navigation-toggler-contact">Contact</label>
+                    <label for="secondary-navigation-toggler-cancel" aria-hidden="true">Contact</label>
+                </li>
+            </ol>
+        </nav>
+    </header>
+
+    <div class="secondary-navigation  secondary-navigation-menu">
+        <label for="secondary-navigation-toggler-cancel">&#x2715;</label>
+        <ol class="secondary-navigation-list">
+            <li><a class="secondary-navigation-home" href="/" title="">Home</a></li>
+            <li><a class="secondary-navigation-animation" href="/animation.html" title="Animation Gallery">Animation</a></li>
+            <li><a class="secondary-navigation-illustration" href="/illustration.html" title="Illustration Gallery">Illustration</a></li>
+            <li><a class="secondary-navigation-design" href="/design.html" title="Design Gallery">Design</a></li>
+        </ol>
+        <div class="copyright">
+            <span>&copy; {{ site.time | date: "%Y" }} {{ site.author }}</span>
+            <span>All Rights Reserved</span>
+        </div>
+    </div>
+
+    <div class="secondary-navigation  secondary-navigation-contact">
+        <label for="secondary-navigation-toggler-cancel">&#x2715;</label>
+        <ol class="secondary-navigation-list">
+            <li><a href="{{ site.twitter_url }}" title="{{ site.author }} on Twitter">
+                <svg><use xlink:href="#svg-twitter" /></svg>
+                <span>Follow</span>
+            </a></li>
+            <li><a href="{{ site.vimeo_url }}" title="{{ site.author }} on Vimeo">
+                <svg><use xlink:href="#svg-vimeo" /></svg>
+                <span>Watch</span>
+            </a></li>
+            <li><a href="{{ site.linkedin_url }}" title="{{ site.author }} on LinkedIn">
+                <svg><use xlink:href="#svg-linkedin" /></svg>
+                <span>Add</span>
+            </a></li>
+            <li><a href="{{ site.tumblr_url }}" title="{{ site.author }} on Tumblr">
+                <svg><use xlink:href="#svg-tumblr" /></svg>
+                <span>Blog</span>
+            </a></li>
+            <li><a href="mailto:{{ site.author_email }}" title="Email {{ site.author }}">
+                <svg><use xlink:href="#svg-email" /></svg>
+                <span>Email</span>
+            </a></li>
+        </ol>
+        <div class="copyright">
+            <span>&copy; {{ site.time | date: "%Y" }} {{ site.author }}</span>
+            <span>All Rights Reserved</span>
+        </div>
+    </div>
+
+    <div class="modal-container  secondary-navigation-cancel">
+        <label for="secondary-navigation-toggler-cancel">Cancel</label>
+    </div>
+
+    <section class="content">
+        <article class="{% if page.layout != "carousel" %}wrap  {% endif %}clear" role="main">
