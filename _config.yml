@@ -15,12 +15,12 @@ linkedin_url: "https://www.linkedin.com/in/lukecarltonanimator"
 tumblr_url:   "http://www.toanimatelikethis.tumblr.com"
 
 # Expects six-character hash codes
-menu_background_colour:        ""
-menu_text_colour:              ""
-menu_text_active_colour:       ""
-home_background_colour:        ""
-home_intro_text_colour:        ""
-home_intro_text_shadow_colour: ""
+menu_background_colour:        "22B0E3"
+menu_text_colour:              "FFFFFF"
+menu_text_active_colour:       "0883B1"
+home_background_colour:        "FACE4B"
+home_intro_text_colour:        "FFFFFF"
+home_intro_text_shadow_colour: "000000"
 # Lives under the /images folder, expects the file name
 logo: "logo.png"
 home_background_image: "bg-home.png"
