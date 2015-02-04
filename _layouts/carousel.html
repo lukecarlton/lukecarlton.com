@@ -37,7 +37,7 @@
                     <li{% if item.slug == page.slug %} class="active"{% endif %} data-slug="{{ item.slug }}"{% if item.navigation_colour %} data-color="{{ item.navigation_colour }}"{% endif %} style="width: {{ 100 | divided_by: total_items }}%;">
                         <figure class="item-media{% if item.vimeo or item.youtube %}  video{% endif %}">
                             {% if item.image %}
-                                <img src="{% if item.image contains: "//" %}{{ item.image }}{% else %}/images/thumbnails/{{ item.image }}{% endif %}" alt="">
+                                <img src="{% if item.image contains: "//" %}{{ item.image }}{% else %}/images/{{ item.image }}{% endif %}" alt="">
                             {% elsif item.vimeo %}
                                 <iframe src="//player.vimeo.com/video/{{ item.vimeo }}?title=0&byline=0&portrait=0&color={% if item.vimeo_colour %}{{ item.vimeo_colour | replace: '#', '' }}{% else %}C73E2C{% endif %}" width="992" height="558" frameborder="0" allowfullscreen></iframe>
                             {% elsif item.youtube %}
