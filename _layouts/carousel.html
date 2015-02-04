@@ -49,10 +49,10 @@
                             {% if item.external or item.share %}
                                 <ul class="share-links">
                                     {% if item.external and item.external != "false" and item.external != "" %}
-                                        <li><a href="{{ item.external }}" title="External Link"><svg><use xlink:href="#svg-external" /></svg></a></li>
+                                        <li><a href="{{ item.external }}" title="External Link" target="_blank"><svg><use xlink:href="#svg-external" /></svg></a></li>
                                     {% endif %}
                                     {% if item.share and item.share != "false" and share != "" %}
-                                        <li><a href="{{ item.share }}" title="Share"><svg><use xlink:href="#svg-share" /></svg></a></li>
+                                        <li><a href="{{ item.share }}" title="Share" target="_blank"><svg><use xlink:href="#svg-share" /></svg></a></li>
                                     {% endif %}
                                 </ul>
                             {% endif %}
