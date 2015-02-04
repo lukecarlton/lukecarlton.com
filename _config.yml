@@ -15,9 +15,9 @@ linkedin_url: "https://www.linkedin.com/in/lukecarltonanimator"
 tumblr_url:   "http://www.toanimatelikethis.tumblr.com"
 
 # Expects six-character hash codes
-menu_background_colour:        "494949"
-menu_text_colour:              "FFFFFF"
-menu_text_active_colour:       "181818"
+menu_background_colour:        "ffffff"
+menu_text_colour:              "000000"
+menu_text_active_colour:       "494949"
 home_background_colour:        "FACE4B"
 home_intro_text_colour:        "FFFFFF"
 home_intro_text_shadow_colour: "000000"
