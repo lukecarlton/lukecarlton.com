@@ -22,8 +22,8 @@ home_background_colour:        "F8C83A"
 home_intro_text_colour:        "FFFFFF"
 home_intro_text_shadow_colour: "000000"
 # Lives under the /images folder, expects the file name
-logo: "logo.png"
-home_background_image: "bg-home.png"
+logo: "homepage/logo.png"
+home_background_image: "homepage/bg-home.png"
 
 
 # Don't touch below me!
