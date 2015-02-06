@@ -91,9 +91,9 @@ header {
                 display: none;
             }
         }
-            .secondary-navigation-toggler-menu:checked ~ header .primary-navigation-menu,
+            .secondary-navigation-toggler-work:checked ~ header .primary-navigation-work,
             .secondary-navigation-toggler-contact:checked ~ header .primary-navigation-contact {
-                label[for*="menu"],
+                label[for*="work"],
                 label[for*="contact"] {
                     display: none;
                 }
@@ -175,7 +175,7 @@ header {
                 transition: margin .2s ease;
             }
         }
-        // Section highlights in 'Menu' Secondary Navigation
+        // Section highlights in 'work' Secondary Navigation
         .home-page & .secondary-navigation-home,
         .animation-page & .secondary-navigation-animation,
         .illustration-page & .secondary-navigation-illustration,
@@ -239,13 +239,13 @@ body > .secondary-navigation-cancel {
 /**
  * Control the Secondary Navigation
  */
-.secondary-navigation-toggler-menu:checked ~ .secondary-navigation-cancel,
-.secondary-navigation-toggler-menu:checked ~ .secondary-navigation-menu,
+.secondary-navigation-toggler-work:checked ~ .secondary-navigation-cancel,
+.secondary-navigation-toggler-work:checked ~ .secondary-navigation-work,
 .secondary-navigation-toggler-contact:checked ~ .secondary-navigation-cancel,
 .secondary-navigation-toggler-contact:checked ~ .secondary-navigation-contact {
     visibility: visible;
 }
-.secondary-navigation-toggler-menu:checked ~ .secondary-navigation-menu,
+.secondary-navigation-toggler-work:checked ~ .secondary-navigation-work,
 .secondary-navigation-toggler-contact:checked ~ .secondary-navigation-contact {
     transform: translateX(100%);
     transition: transform .1s ease;
@@ -253,7 +253,7 @@ body > .secondary-navigation-cancel {
 /**
  * Control the content panels when navigation is open
  */
-.secondary-navigation-toggler-menu:checked ~ header,
+.secondary-navigation-toggler-work:checked ~ header,
 .secondary-navigation-toggler-contact:checked ~ header {
     padding-left: 17.125em;
     @include breakpoint("medium") {
@@ -261,7 +261,7 @@ body > .secondary-navigation-cancel {
         transform: translateX(15.625em);
     }
 }
-.secondary-navigation-toggler-menu:checked ~ .content,
+.secondary-navigation-toggler-work:checked ~ .content,
 .secondary-navigation-toggler-contact:checked ~ .content {
     margin-left: 15.625em;
     @include breakpoint("medium") {

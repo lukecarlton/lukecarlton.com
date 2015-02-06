@@ -596,9 +596,9 @@ header {
   .primary-navigation-list label[for*="cancel"] {
     display: none; }
 
-.secondary-navigation-toggler-menu:checked ~ header .primary-navigation-menu label[for*="menu"], .secondary-navigation-toggler-menu:checked ~ header .primary-navigation-menu label[for*="contact"], .secondary-navigation-toggler-contact:checked ~ header .primary-navigation-contact label[for*="menu"], .secondary-navigation-toggler-contact:checked ~ header .primary-navigation-contact label[for*="contact"] {
+.secondary-navigation-toggler-work:checked ~ header .primary-navigation-work label[for*="work"], .secondary-navigation-toggler-work:checked ~ header .primary-navigation-work label[for*="contact"], .secondary-navigation-toggler-contact:checked ~ header .primary-navigation-contact label[for*="work"], .secondary-navigation-toggler-contact:checked ~ header .primary-navigation-contact label[for*="contact"] {
   display: none; }
-.secondary-navigation-toggler-menu:checked ~ header .primary-navigation-menu label[for*="cancel"], .secondary-navigation-toggler-contact:checked ~ header .primary-navigation-contact label[for*="cancel"] {
+.secondary-navigation-toggler-work:checked ~ header .primary-navigation-work label[for*="cancel"], .secondary-navigation-toggler-contact:checked ~ header .primary-navigation-contact label[for*="cancel"] {
   color: #000000;
   display: block; }
 
@@ -714,10 +714,10 @@ body > .secondary-navigation-cancel {
 /**
  * Control the Secondary Navigation
  */
-.secondary-navigation-toggler-menu:checked ~ .secondary-navigation-cancel, .secondary-navigation-toggler-menu:checked ~ .secondary-navigation-menu, .secondary-navigation-toggler-contact:checked ~ .secondary-navigation-cancel, .secondary-navigation-toggler-contact:checked ~ .secondary-navigation-contact {
+.secondary-navigation-toggler-work:checked ~ .secondary-navigation-cancel, .secondary-navigation-toggler-work:checked ~ .secondary-navigation-work, .secondary-navigation-toggler-contact:checked ~ .secondary-navigation-cancel, .secondary-navigation-toggler-contact:checked ~ .secondary-navigation-contact {
   visibility: visible; }
 
-.secondary-navigation-toggler-menu:checked ~ .secondary-navigation-menu, .secondary-navigation-toggler-contact:checked ~ .secondary-navigation-contact {
+.secondary-navigation-toggler-work:checked ~ .secondary-navigation-work, .secondary-navigation-toggler-contact:checked ~ .secondary-navigation-contact {
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
           transform: translateX(100%);
@@ -727,19 +727,19 @@ body > .secondary-navigation-cancel {
 /**
  * Control the content panels when navigation is open
  */
-.secondary-navigation-toggler-menu:checked ~ header, .secondary-navigation-toggler-contact:checked ~ header {
+.secondary-navigation-toggler-work:checked ~ header, .secondary-navigation-toggler-contact:checked ~ header {
   padding-left: 17.125em; }
   @media screen and (max-width: 780px) {
-    .secondary-navigation-toggler-menu:checked ~ header, .secondary-navigation-toggler-contact:checked ~ header {
+    .secondary-navigation-toggler-work:checked ~ header, .secondary-navigation-toggler-contact:checked ~ header {
       padding-left: 1.25em;
       -webkit-transform: translateX(15.625em);
           -ms-transform: translateX(15.625em);
               transform: translateX(15.625em); } }
 
-.secondary-navigation-toggler-menu:checked ~ .content, .secondary-navigation-toggler-contact:checked ~ .content {
+.secondary-navigation-toggler-work:checked ~ .content, .secondary-navigation-toggler-contact:checked ~ .content {
   margin-left: 15.625em; }
   @media screen and (max-width: 780px) {
-    .secondary-navigation-toggler-menu:checked ~ .content, .secondary-navigation-toggler-contact:checked ~ .content {
+    .secondary-navigation-toggler-work:checked ~ .content, .secondary-navigation-toggler-contact:checked ~ .content {
       margin-left: 0;
       -webkit-transform: translateX(15.625em);
           -ms-transform: translateX(15.625em);
