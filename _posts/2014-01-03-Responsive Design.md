@@ -11,7 +11,7 @@ title: "Responsive Design"
 subtitle: "Direction, Hand Drawn Animation, Editing"
 
 # This is for SEO
-description: "Squiz Edge motion graphics"
+description: "Squiz Responsive Web Design Promo"
 
 # either animation, design, or illustration
 category: animation
