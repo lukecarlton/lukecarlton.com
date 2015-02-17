@@ -20,7 +20,7 @@ category: illustration
 image: "//placehold.it/2000x800/FBD049/FFFFFF"
 
 # This appears on the gallery page, lives under /images/thumbnails
-thumbnail: billmurray1.jpg
+thumbnail: gallerybox_NA.jpg
 
 external: "http://eelslap.com/"
 ---
