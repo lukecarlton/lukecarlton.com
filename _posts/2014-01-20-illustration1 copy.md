@@ -7,11 +7,11 @@ layout: carousel
 # This should match the filename and defines the URL of this page
 slug: illustration1
 
-title: "Illustration Example 1"
-subtitle: "Subtitle Example 1"
+title: "The Brooke"
+subtitle: "Concept Illustrations"
 
 # This is for SEO
-description: "Illustration Example Description 1"
+description: "The Brooke Concpet Illustrations Donkeys Horses and Mules"
 
 # either animation, design, or illustration
 category: illustration
@@ -25,4 +25,4 @@ thumbnail: gallerybox_NA.jpg
 external: "http://eelslap.com/"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac elit enim, et tempus nulla. Donec id risus arcu. Nulla sagittis magna sem, eget tristique nisi. Maecenas at eros urna. Pellentesque quis risus elit. Duis venenatis, odio sit amet rhoncus aliquam, mauris mi sodales arcu, ac tincidunt eros ipsum eu lectus. Sed id eros et ante hendrerit malesuada ut sed metus. Nulla risus lectus, faucibus eget laoreet et, elementum id purus. Sed blandit semper porttitor. Sed cursus tincidunt purus, eget tincidunt magna luctus nec.
+Digital Artwork.
