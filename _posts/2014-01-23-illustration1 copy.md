@@ -25,4 +25,4 @@ thumbnail: gallerybox_NA.jpg
 external: "http://eelslap.com/"
 ---
 
-Digital Artwork.
+Direction and Illustration: Luke Carlton
