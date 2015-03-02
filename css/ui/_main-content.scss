@@ -249,10 +249,14 @@ article {
                 }
             }
             a {
+                color: black;
                 width: 25px;
                 height: 24px;
                 display: block;
                 overflow: hidden;
+            }
+            svg {
+                stroke: #000000;
             }
         }
         .item-text {

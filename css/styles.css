@@ -968,10 +968,13 @@ article {
     .share-links li + li {
       margin-left: 1em; }
   .share-links a {
+    color: black;
     width: 25px;
     height: 24px;
     display: block;
     overflow: hidden; }
+  .share-links svg {
+    stroke: #000000; }
 
 .item-text {
   line-height: 1.5em; }
