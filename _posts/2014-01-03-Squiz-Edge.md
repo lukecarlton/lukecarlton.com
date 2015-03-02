@@ -23,7 +23,7 @@ vimeo: "103414329"
 vimeo_colour: "ffffff"
 
 # This appears on the gallery page, lives under /images/thumbnails
-thumbnail: gallerybox_A_Edge.jpg
+thumbnail: gallerybox_A_Edge.gif
 
 external: false
 share: true
