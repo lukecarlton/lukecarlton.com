@@ -760,9 +760,13 @@ body > .secondary-navigation-cancel {
       padding-top: 7em; } }
   .home-page .content {
     background-color: #FACE4B;
-    background-position: center bottom;
+    background-position: center center;
     background-repeat: no-repeat;
+    background-size: contain;
     padding-top: 8.5em; }
+    @media screen and (max-width: 780px) {
+      .home-page .content {
+        background-size: cover; } }
     @media screen and (max-width: 500px) {
       .home-page .content {
         padding-top: 9.5em; } }

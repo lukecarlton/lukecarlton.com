@@ -5,7 +5,9 @@ layout: carousel
 
 
 # This should match the filename and defines the URL of this page
-slug: Showreel
+# i.e. 2014-01-01-Showreel.md -> Showreel is the slug
+#      lukecarlton.com/animation/Showreel -> Showreel becomes the webpath
+slug: Responive-Design
 
 title: "Responsive Design"
 subtitle: "Direction, Hand Drawn Animation, Editing"
@@ -23,6 +25,7 @@ vimeo_colour: "ffffff"
 # This appears on the gallery page, lives under /images/thumbnails
 thumbnail: gallerybox_Responsive.jpg
 
+external: false
 share: true
 ---
 

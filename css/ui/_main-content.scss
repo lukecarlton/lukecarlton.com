@@ -13,9 +13,13 @@
     }
     .home-page & {
         background-color: $yellow;
-        background-position: center bottom;
+        background-position: center center;
         background-repeat: no-repeat;
+        background-size: contain;
         padding-top: 8.5em;
+        @include breakpoint("medium") {
+            background-size: cover;
+        }
         @include breakpoint("small") {
             padding-top: 9.5em;
         }
