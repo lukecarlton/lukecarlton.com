@@ -910,8 +910,8 @@ article {
 .item-carousel {
   display: block;
   float: left;
-  -webkit-transition: margin 0.75s cubic-bezier(0.75, 0.35, 0.65, 1.35);
-          transition: margin 0.75s cubic-bezier(0.75, 0.35, 0.65, 1.35); }
+  -webkit-transition: margin 1s ease;
+          transition: margin 1s ease; }
   .item-carousel > li {
     opacity: 0;
     display: inline-block;

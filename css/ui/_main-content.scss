@@ -182,7 +182,8 @@ article {
 .item-carousel {
     display: block;
     float: left;
-    transition: margin .75s cubic-bezier(.75, .35, .65, 1.35);
+    // transition: margin .75s cubic-bezier(.75, .35, .65, 1.35);
+    transition: margin 1s ease;
     > li {
         opacity: 0;
         display: inline-block;
