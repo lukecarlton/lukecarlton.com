@@ -7,29 +7,26 @@ layout: carousel
 # This should match the filename and defines the URL of this page
 # i.e. 2014-01-01-Showreel.md -> Showreel is the slug
 #      lukecarlton.com/animation/Showreel -> Showreel becomes the webpath
-slug: VAM
+slug: Squiz-Edge
 
-title: "V&A Museum"
-subtitle: "Conceptual Responsive Redesign... Offt say that 10 times quick"
+title: "Squiz Edge"
+subtitle: "Direction, Motion Graphics, Editing"
 
 # This is for SEO
-description: "Victoria & Albert Museum Redesign"
+description: "Squiz Edge motion graphics"
 
 # either animation, design, or illustration
-category: design
+category: animation
 
 # either image, vimeo (vimeo_colour optional), or youtube
-image: VAM/VAM_Designs.png
+vimeo: "103414329"
+vimeo_colour: "ffffff"
 
 # This appears on the gallery page, lives under /images/thumbnails
-thumbnail: gallerybox_D_V&A.jpg
+thumbnail: gallerybox_A_Edge.gif
 
 external: false
 share: true
 ---
 
-The Victoria and Albert Museum, London, is the world's largest museum of decorative arts and design, housing a permanent collection of over 4.5 million objects
-
-Explaination to follow.
-
-Design: Luke Carlton  |  Creative Strategy: Roger Warner
+Direction and Animation: Luke Carlton
