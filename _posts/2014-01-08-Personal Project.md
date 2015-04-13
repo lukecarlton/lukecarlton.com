@@ -29,4 +29,4 @@ external: false
 share: true
 ---
 
-Direction and Animation: Luke Carlton  |  Music: Mark Thomas
+Direction and Animation: Luke Carlton
