@@ -22,7 +22,7 @@ category: illustration
 image: "Mountians_1.jpg"
 
 # This appears on the gallery page, lives under /images/thumbnails
-thumbnail: gallerybox_I_Office.jpg
+thumbnail: gallerybox_mt.jpg
 
 external: false
 share: true
