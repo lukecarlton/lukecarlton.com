@@ -34,7 +34,7 @@
             <ol class="clear  item-carousel" style="width: {{ total_items }}00%; margin-left: -{{ active_index | minus: 1 }}00%;">
                 {% for item in site.posts reversed %}
                 {% if item.category == page.category %}
-                    <li{% if item.slug == page.slug %} class="active"{% endif %} data-slug="{{ item.slug }}"{% if item.navigation_colour %} data-color="{{ item.navigation_colour }}"{% endif %} style="width: {{ 100 | divided_by: total_items }}%;">
+                    <li{% if item.slug == page.slug %} class="active"{% endif %} data-slug="{{ item.slug }}"{% if item.navigation_colour %} data-color="{{ item.navigation_colour }}"{% endif %} style="width: {{ 100.000 | divided_by: total_items }}%;">
                         <figure class="item-media{% if item.vimeo or item.youtube %}  video{% endif %}">
                             {% if item.image %}
                                 <img src="{% if item.image contains: "//" %}{{ item.image }}{% else %}/images/{{ item.image }}{% endif %}" alt="">
