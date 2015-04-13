@@ -84,46 +84,67 @@
             moveScrubber();
             moveNavigation();
         });
-        $('.item-navigation a').click( function(e) {
-            e.preventDefault();
+        function scrollNew() {
             carouselOffset = $('.item-carousel').get(0).style.marginLeft.replace('%','');
             activeItem = $('.item-carousel > .active');
-            if( $(this).parent().hasClass('item-next') ) {
-                activeItem.removeClass('active');
-                if( activeItem.is(':last-child') ) {
-                    $('.item-carousel > li:first-child').addClass('active');
-                    activeScrubber = 0;
-                } else {
-                    activeItem.next().addClass('active');
-                    activeScrubber = activeItem.next().index();
-                }
-                newCarouselOffset = parseInt(carouselOffset) - 100;
-                if( newCarouselOffset <= (numItems * 100 * -1) ) {
-                    newCarouselOffset = 0;
-                }
-                $('.item-carousel').css('margin-left', newCarouselOffset + '%');
+        }
+        function scrollPrevious() {
+            activeItem.removeClass('active');
+            if( activeItem.is(':first-child') ) {
+                $('.item-carousel > li:last-child').addClass('active');
+                activeScrubber = $('.item-carousel > li:last-child').index();
+            } else {
+                activeItem.prev().addClass('active');
+                activeScrubber = activeItem.prev().index();
             }
-            if( $(this).parent().hasClass('item-previous') ) {
-                activeItem.removeClass('active');
-                if( activeItem.is(':first-child') ) {
-                    $('.item-carousel > li:last-child').addClass('active');
-                    activeScrubber = $('.item-carousel > li:last-child').index();
-                } else {
-                    activeItem.prev().addClass('active');
-                    activeScrubber = activeItem.prev().index();
-                }
-                newCarouselOffset = parseInt(carouselOffset) + 100;
-                if( newCarouselOffset > 0 ) {
-                    newCarouselOffset = ((numItems - 1) * 100 * -1);
-                }
-                $('.item-carousel').css('margin-left', newCarouselOffset + '%');
+            newCarouselOffset = parseInt(carouselOffset) + 100;
+            if( newCarouselOffset > 0 ) {
+                newCarouselOffset = ((numItems - 1) * 100 * -1);
             }
+            $('.item-carousel').css('margin-left', newCarouselOffset + '%');
+        }
+        function scrollNext() {
+            activeItem.removeClass('active');
+            if( activeItem.is(':last-child') ) {
+                $('.item-carousel > li:first-child').addClass('active');
+                activeScrubber = 0;
+            } else {
+                activeItem.next().addClass('active');
+                activeScrubber = activeItem.next().index();
+            }
+            newCarouselOffset = parseInt(carouselOffset) - 100;
+            if( newCarouselOffset <= (numItems * 100 * -1) ) {
+                newCarouselOffset = 0;
+            }
+            $('.item-carousel').css('margin-left', newCarouselOffset + '%');
+        }
+        function scrollReset() {
             // Reset the active scrubber item
             $('.item-scrubber .active').removeClass('active');
             $('.item-scrubber li').eq(activeScrubber).addClass('active');
             moveScrubber();
             moveNavigation();
             changeSlug();
+        }
+        $('.item-navigation a').click( function(e) {
+            e.preventDefault();
+            scrollNew();
+            if( $(this).parent().hasClass('item-previous') ) {
+                scrollPrevious();
+            }
+            if( $(this).parent().hasClass('item-next') ) {
+                scrollNext();
+            }
+            scrollReset();
+        });
+        $('body').keydown( function(e) {
+            scrollNew();
+            if( e.which == 37 ) {
+                scrollPrevious();
+            } else if ( e.which == 39 ) {
+                scrollNext();
+            }
+            scrollReset();
         });
         $('.item-scrubber a').click( function(e) {
             e.preventDefault();
@@ -131,9 +152,6 @@
             // Reset the active scrubber item
             $('.item-scrubber .active').removeClass('active');
             $(this).parent().addClass('active');
-            // Reset the active carousel item
-            $('.item-carousel > .active').removeClass('active');
-            $('.item-carousel > li').eq(activeScrubber).addClass('active');
             // Slide the carousel based on the new active item
             $('.item-carousel').css('margin-left', (activeScrubber * 100 * -1) + '%');
             moveScrubber();
@@ -141,9 +159,4 @@
             changeSlug();
         });
     {% endif %}
-
-    /**
-     * Google Analytics
-     */
-    // INSERT HERE
 </script>
