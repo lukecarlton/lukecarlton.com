@@ -31,6 +31,7 @@ share: true
 ![Concepts]( /images/Mountains_Concepts.png )
 <br><br>
 ![Concepts]( /images/Mountains2_Concepts.png )
+<br><br>
 A series of mountain range illustrations.
 
 
