@@ -51,7 +51,7 @@
                                     {% if item.external and item.external != "false" and item.external != "" %}
                                         <li><a href="{{ item.external }}" title="External Link" target="_blank"><svg><use xlink:href="#svg-external" /></svg></a></li>
                                     {% endif %}
-                                    {% if item.share and item.share != "false" and share != "" %}
+                                    {% if item.share and item.share != "false" and item.share != "" %}
                                         <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ item.url | url_escape }}" title="Share on Facebook" target="_blank"><svg><use xlink:href="#svg-facebook" /></svg></a></li>
                                         <li><a href="http://pinterest.com/pin/create/link/?url={{ site.url }}{{ item.url | url_escape }}&description={{ item.title | url_escape }}" title="Share on Pinterest" target="_blank"><svg><use xlink:href="#svg-pinterest" /></svg></a></li>
                                         <li><a href="https://twitter.com/intent/tweet/?text={{ item.title }}&url={{ site.url }}{{ item.url | url_escape }}&via={{ site.author_twitter }}" title="Share on Twitter" target="_blank"><svg><use xlink:href="#svg-twitter-small" /></svg></a></li>
@@ -60,7 +60,7 @@
                             {% endif %}
                             <h4>{{ item.subtitle }}</h4>
                             <div class="item-text">
-                                {{ item.content }}
+                                {{ item.content | markdownify }}
                             </div>
                         </div>
                     </li>
