@@ -30,7 +30,7 @@ share: true
 
 ![Concepts]( /images/nana_Concepts.jpg )
 <br><br>
-![Concepts]( /images/Globe2_Concepts.png )
+![Concepts]( /images/nana2_Concepts.jpg )
 <br><br>
 An attempt at custom typography for a poster design.
 
