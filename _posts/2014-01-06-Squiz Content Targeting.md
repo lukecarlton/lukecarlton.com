@@ -9,21 +9,21 @@ layout: carousel
 #      lukecarlton.com/animation/Showreel -> Showreel becomes the webpath
 slug: Responive-Design
 
-title: "Responsive Design"
+title: "Squiz Content Targeting"
 subtitle: "Direction, Hand Drawn Animation, Editing"
 
 # This is for SEO
-description: "Squiz Responsive Web Design Promo"
+description: "Squiz Content Targeting Promo"
 
 # either animation, design, or illustration
 category: animation
 
 # either image, vimeo (vimeo_colour optional), or youtube
-vimeo: "116765297"
+vimeo: "124798916"
 vimeo_colour: "ffffff"
 
 # This appears on the gallery page, lives under /images/thumbnails
-thumbnail: gallerybox_A_Responsive.gif
+thumbnail: gallerybox_Content_Targeting.gif
 
 external: false
 share: true

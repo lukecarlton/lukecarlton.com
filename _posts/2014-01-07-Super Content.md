@@ -9,24 +9,24 @@ layout: carousel
 #      lukecarlton.com/animation/Showreel -> Showreel becomes the webpath
 slug: Responive-Design
 
-title: "Responsive Design"
-subtitle: "Direction, Hand Drawn Animation, Editing"
+title: "Super Content"
+subtitle: "Direction, Motion Graphics, Hand Drawn"
 
 # This is for SEO
-description: "Squiz Responsive Web Design Promo"
+description: "Squiz Super Content Promo"
 
 # either animation, design, or illustration
 category: animation
 
 # either image, vimeo (vimeo_colour optional), or youtube
-vimeo: "116765297"
+vimeo: "124798917"
 vimeo_colour: "ffffff"
 
 # This appears on the gallery page, lives under /images/thumbnails
-thumbnail: gallerybox_A_Responsive.gif
+thumbnail: gallerybox_Super_Content.gif
 
 external: false
 share: true
 ---
 
-Direction and Animation: Luke Carlton  |  Music: TVH - The Visual Hit
+Direction and Animation: Luke Carlton  |  Music: Mark Thomas
