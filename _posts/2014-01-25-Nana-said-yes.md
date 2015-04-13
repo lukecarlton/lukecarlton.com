@@ -28,7 +28,7 @@ external: false
 share: true
 ---
 
-![Concepts]( /images/nana_Concepts.png )
+![Concepts]( /images/nana_Concepts.jpg )
 <br><br>
 ![Concepts]( /images/Globe2_Concepts.png )
 <br><br>
