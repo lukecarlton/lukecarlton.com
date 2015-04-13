@@ -19,7 +19,7 @@ description: "Personal Project Short Film"
 category: animation
 
 # either image, vimeo (vimeo_colour optional), or youtube
-image: "thumbnail/gallerybox_Personal_Project.gif"
+image: "Brooke_Banner.jpg"
 
 # This appears on the gallery page, lives under /images/thumbnails
 thumbnail: gallerybox_Personal_Project.gif
