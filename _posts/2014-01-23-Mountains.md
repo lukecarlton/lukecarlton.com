@@ -28,4 +28,6 @@ external: false
 share: true
 ---
 
+![Concepts]( {{ site.url }}/images/Mountains_Concepts.png )
+
 Personal Project: Luke Carlton
