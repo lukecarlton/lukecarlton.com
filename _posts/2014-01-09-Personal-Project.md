@@ -9,7 +9,7 @@ layout: carousel
 #      lukecarlton.com/animation/Showreel -> Showreel becomes the webpath
 slug: Personal-Project
 
-title: "Personal Project - WIP"
+title: "Personal Project - Stuffed"
 subtitle: "Coming Soon"
 
 # This is for SEO
