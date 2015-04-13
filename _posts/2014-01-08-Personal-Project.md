@@ -7,9 +7,9 @@ layout: carousel
 # This should match the filename and defines the URL of this page
 # i.e. 2014-01-01-Showreel.md -> Showreel is the slug
 #      lukecarlton.com/animation/Showreel -> Showreel becomes the webpath
-slug: Responive-Design
+slug: Personal-Project
 
-title: "Personal Project"
+title: "Personal Project - WIP"
 subtitle: "Coming Soon"
 
 # This is for SEO

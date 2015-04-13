@@ -7,7 +7,7 @@ layout: carousel
 # This should match the filename and defines the URL of this page
 # i.e. 2014-01-01-Showreel.md -> Showreel is the slug
 #      lukecarlton.com/animation/Showreel -> Showreel becomes the webpath
-slug: Responive-Design
+slug: Squiz-Content-Targeting
 
 title: "Squiz Content Targeting"
 subtitle: "Direction, Hand Drawn Animation, Editing"
